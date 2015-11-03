@@ -1,0 +1,606 @@
+﻿
+body {
+    min-width: 600px;
+    background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); 
+    font-family: 'Domine', serif;
+}
+
+nav{
+    background: linear-gradient(to bottom,  #a90329 0%,#8f0222 1%,#6d0019 70%); 
+    border-bottom: 8px dashed #540302;
+    min-width: 1110px;
+    box-shadow: 0px 10px 129px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    z-index: -1;
+}
+
+#nav-container {
+    height:120px;
+    margin: auto;
+    width:1110px;
+
+}
+
+.nav-div {
+    display: inline;
+}
+
+.nav-div-logo {
+    height: 100px;
+    position:relative;
+    bottom: 40px;
+    display: inline;
+}
+
+nav a:hover,
+nav a:visited,
+nav a:before,
+nav a:after,
+nav a:focus {
+    color:white;
+    text-decoration: none;
+}
+
+.nav-div-container {
+    margin:auto;
+    padding-top:25px;
+    text-align: center;
+    width:900px;
+    display: inline-block;
+}
+
+.nav-bar-search-container {
+    background-color: white;
+    width:720px;
+    height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.nav-search-bar {
+    width:625px;
+    border: none;
+    outline: 0px;
+    text-indent: 10px;
+    height: 30px;
+    border-right: 2px solid lightgray;
+    border-radius:5px;
+}
+
+.nav-bar-submit {
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    border: none;
+    width:91px;
+    height: 30px;
+}
+
+.nav-bar-button-container {
+    margin-top: 20px;
+    width: 720px;
+    display:inline-block;
+}
+
+.nav-bar-buttons {
+    color: white;
+    height: 30px;
+    margin-right: 1%;
+    float:left;
+    width:24%;
+    text-align: center;
+}
+
+#navLogo {
+    height: 100px;
+    width: 200px;
+    position: relative;
+    bottom: 15px;
+}
+
+#navLogIn {
+    position:relative;
+    bottom: 15px;
+    color:white;
+    outline: none;
+    width: 100px;
+    border: none;
+    background-color:rgba(0,0,0,0);
+    margin-left: 20px;
+}
+
+#navSignUp {
+    position: relative;
+    top: 0px;
+    color: white;   
+    outline: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color:#A32C28;
+    position: relative;
+    bottom: 10px;
+    margin-left: 20px;
+}
+
+#viewDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1110px;
+}
+
+
+.home-carousel:hover .home-carousel-buttons,
+.home-carousel:hover .home-carousel-mask,
+.home-carousel:hover .home-carousel-header,
+.home-carousel:hover .home-carousel-description {
+    opacity: 1;
+}
+
+.home-carousel-mask {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,.7) 100%);
+    position:absolute;
+    bottom: 0px;
+    width: 555px;
+    height: 400px;
+    z-index: 2;
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+
+.home-carousel,
+.city-choice-div {
+    display: inline-block;
+}
+
+.city-choice-div{
+    height:450px;
+    width:555px;
+    float:right;
+}
+
+.home-carousel {
+    width: 555px;
+    height: 450px;
+    overflow:hidden;
+    position:relative;
+    border-bottom: 1px solid black;
+}
+
+.home-carousel-img {
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    display:inline;
+    transition: transform ease-in-out .75s
+}
+
+.home-carousel-header {
+    color:white;
+    bottom: 40px;
+    left:30px;
+    position:absolute;
+    z-index: 4;
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.home-carousel-description {
+    color:white;
+    bottom: 10px;
+    margin: 0px;
+    left:30px;
+    position:absolute;
+    z-index: 5;
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.home-carousel-buttons {
+    outline:none;
+    transition-duration: .5s;
+    transition-delay: .25s;
+    border:none;
+    font-weight:700;
+    width: 40px;
+    height:40px;
+    top: 200px;
+    position:absolute;
+    z-index: 100000;
+    opacity: 0;
+}
+
+.home-carousel-button-left {
+    left: 10px;
+}
+
+.home-carousel-button-right {
+    right: 10px;
+}
+
+.city-choice-button {
+    background-size: cover;
+    background-position:center;
+    padding-top: 12.2px;
+    font-size: 25px;
+    text-align: center;
+    color:rgba(255,255,255,1);
+    height: 48.7px;
+    width: 267.5px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    border-left: 5px solid #CFA770;
+    transition-duration: .25s;
+    transition-timing-function:ease-in-out;
+    overflow:hidden;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.city-choice-button:hover {
+    text-decoration: none;
+    color:rgba(255,255,255,0);
+    transform: translateX(-10px);
+}
+
+.city-choice-img {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width: 100%;
+    height:100%;
+    transition-duration: .25s;
+    transition-timing-function:ease-in-out;
+    -webkit-filter: grayscale(.8);
+    z-index: -1;
+}
+
+.city-choice-button:hover .city-choice-img{
+    -webkit-filter: grayscale(0);
+}
+
+.top-trucks-title {
+    text-align:center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+
+}
+
+.top-trucks-container {
+    padding-left:0px;
+}
+
+.top-truck-container {
+    padding-top: 20px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.top-trucks-image {
+    height: 80px;
+    background-size: cover;
+}
+
+.top-trucks-name {
+    text-align:center;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 20px;
+  margin-top:20px;
+}
+
+.rating > span {
+  display: inline-block;
+  width: 1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   color:gold;
+   position: absolute;
+}
+
+.top-trucks-recommendations {
+    width: 25px;
+    margin: 1px;
+    height: 25px;
+}
+
+.top-trucks-location {
+    margin-top: 20px;
+}
+
+.register-side-page {
+    color:white;
+    padding-top:500px;
+    background-size:cover;
+    padding-bottom: 200px;
+}
+
+.register-side-page button { 
+    border-radius: 7px;
+    background-color:white;
+    font-size:40px;
+}
+
+.register-truck-side {
+    text-align: right;
+    background-image:url(http://foodtrucksreviews.com/wp-content/uploads/2015/04/Balkanik-Taste-Food-Truck-Bethesda-MD-Cheff-Rosen-Ivanov-Balkan-Cuisine.jpg);
+}
+
+.register-customer-side {
+    background-image:url(http://images.huffingtonpost.com/2013-08-07-photo23.JPG);
+}
+
+.signup-form-container {
+    background-image: url(http://www.mobilefoodnews.com/wp-content/uploads/2011/08/Fullerton-Food-Truck-Roundup-1.jpg);
+}
+
+.signup-form {
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+
+}
+
+.signup-form label{
+    display:block;
+    margin:0px;
+    margin-top: 10px;
+}
+
+.signup-form input {
+    margin-bottom: 10px;
+}
+
+.signup-form input{
+    width: 100%;
+    text-indent: 10px;
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.find-trucks-banner {
+    text-align:center;
+    border-bottom: 2px solid lightgray;
+}
+
+.find-truck-container {
+    padding-top: 10px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.find-truck-image {
+    height: 80px;
+    background-position:center;
+    background-size: cover;
+}
+
+.find-trucks-name {
+    margin-top: 15px;
+    text-align:center;
+}
+
+.find-truck-reviews {
+    margin-top: 10px;
+}
+
+.truck-review-single-container {
+    margin-top: 15px;
+}
+
+.truck-profile-name {
+    text-transform:capitalize;
+    margin-top: 0px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.truck-profile-image {
+    background-image:url(http://images2.houstonpress.com/imager/u/original/6416117/foodtruck2.jpg);
+    background-size: 100% 100%;
+    height:350px;
+}
+
+.truck-profile-content {
+    font-size: 15px;
+    margin-left: 0px;
+    margin-right: 10px;
+    text-indent: 30px;
+}
+
+.truck-reviews-title {
+    border-bottom: 2px solid lightgray;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.review-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 20px;
+  margin-top:0px;
+  text-align:left;
+}
+
+.review-rating > span {
+  display: inline-block;
+  width: 1em;
+}
+
+.review-rating > span:hover:before,
+.review-rating > span:hover ~ span:before {
+   content: "\2605";
+   color:gold;
+   position: absolute;
+}
+
+.truck-review-creator-image{
+    height: 40px;
+    width: 40px;
+}
+
+.truck-review-single-title {
+    text-align: left;
+}
+
+.truck-review-content {
+    overflow:hidden;
+    word-wrap: break-word;
+}
+
+.truck-review-readmore {
+    width: 100%;
+    text-align:center;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.remove-padding {
+    padding:0px;
+}
+
+.truck-find-link {
+    color: black;
+}
+
+.click-catcher-modal {
+    transition-property: all;
+    transition-duration:.5s;
+    position:fixed;
+    left:0px;
+    right:0px;
+    bottom: 0px;
+    top:0px;
+    background-color: rgba(0,0,0,.8);
+    opacity: 1;
+}
+
+.click-catcher-modal.ng-hide {
+    opacity: 0;
+}
+
+.click-catcher-modal.ng-hide-remove {
+    transition: all ease-in-out 0.25s;
+}
+
+.modal-container {
+    border: 15px inset rgba(0,0,0,.2);
+    position:fixed;
+    background-color: white;
+    top: 5%;
+    left: 0;
+    right:0;
+    bottom: 4%;
+    margin-left: auto;
+    margin-right:auto;
+    width: 600px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    opacity: 1;
+    transform: translateY(0px); 
+}
+
+.modal-container.ng-hide {
+    opacity: 0;
+    transition: all ease-in-out .2s;
+    transform: translateY(100%);
+}
+
+.modal-container.ng-hide-remove {
+    transition: all ease-in-out 0.45s;
+    transition-delay:.2s;
+}
+
+.modal-container::-webkit-scrollbar-track
+{
+	opacity: 0;
+}
+
+.modal-container::-webkit-scrollbar
+{
+    width: 7px;
+    opacity: 0;
+}
+
+.modal-container::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: darkgray;
+}
+
+.review-modal-profile {
+    display:inline;
+    width:100px;
+    height:100px;
+}
+
+.review-modal-title {
+    display:inline;
+    margin-left: 10px;
+}
+
+
+.review-modal-header {
+    text-align: center;
+}
+
+.create-modal-label {
+    margin-top: 10px;
+    display: block;
+    margin-left: 10px;
+}
+
+.create-review-group {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.review-master-container {
+    height: 60%;
+    min-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.create-review-content {
+    height: 50%;
+    white-space:pre-wrap;
+    text-wrap: normal;
+}
+
+.review-content {
+    max-height:150px;
+    overflow:hidden;
+    word-wrap:break-word;
+    white-space: pre-wrap;
+}
+
+.review-master-container::-webkit-scrollbar-track
+{
+	opacity: 0;
+}
+
+.review-master-container::-webkit-scrollbar
+{
+    width: 7px;
+    opacity: 0;
+}
+
+.review-master-container::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: darkgray;
+}

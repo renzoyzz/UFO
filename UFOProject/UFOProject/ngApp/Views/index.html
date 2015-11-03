@@ -1,0 +1,46 @@
+﻿<div class="home-carousel">
+    
+    <button carousel-item-start  class="home-carousel-buttons home-carousel-button-left" ><</button>
+    <button class="home-carousel-buttons home-carousel-button-right">></button>
+    <div class="home-carousel-img" style="background-image:url('http://www.wafflecakes.com/wp-content/uploads/2013/01/FoodTruckAerial-Pic.jpg')">
+        <div class="home-carousel-mask"></div>
+        <h1 class="home-carousel-header">A Food Truck Isn't Just About the Food. It's the Truck, Too.</h1>
+        <p class="home-carousel-description">n the last decade, mobile businesses have become increasingly popular, with food truck revenues reaching over an estimated $800 million in 2014.</p>
+    </div>
+    <div class="home-carousel-img" style="background-image:url('http://specials-images.forbesimg.com/imageserve/149297fa0db033e1b7b5e6450617d46d/0x600.jpg?fit=scale&background=000000')">
+        <div class="home-carousel-mask"></div>
+        <h1 class="home-carousel-header">Food Truck Hospitality</h1>
+        <p class="home-carousel-description">Restaurant Hospitality digs into the food trucks phenomenon, which shows no signs of slowing.</p>
+    </div>
+    <div carousel-item-end  class="home-carousel-img" style="background-image:url('http://specials-images.forbesimg.com/imageserve/d84d051ccbda4638baad509ce8904e87/0x600.jpg?fit=scale&background=000000')">
+        <div class="home-carousel-mask"></div>
+        <h1 class="home-carousel-header">Food Trucks: 25 Of The Coolest</h1>
+        <p class="home-carousel-description">No need for brick n’ mortar, no need for plates or tables or chairs—just a truck equipped with a griddle, some refrigeration and some fuel.</p>
+    </div>
+</div>
+<div class="city-choice-div">
+    <a href="/findTrucks/{{city.id}}" class="col-xs-6 city-choice-button" ng-repeat="city in vm.cities"><img class="city-choice-img" ng-src="{{city.imageUrl}}" /> {{city.name}}</a>
+</div>
+<div class="col-xs-9 top-trucks-container">
+    <h1 class="col-xs-12 top-trucks-title">This Weeks Top Trucks</h1>
+    <div ng-repeat="truck in vm.topTrucksList" class="row top-truck-container">
+        <div class="col-xs-12">
+            <a href="/truckProfile/{{truck.id}}" class="truck-find-link">
+                <div class="col-xs-2 top-trucks-image" style="background-image:url(http://images2.houstonpress.com/imager/u/original/6416117/foodtruck2.jpg)"></div>
+                <div class="col-xs-3 top-trucks-name"><h3>{{truck.name}}</h3></div>
+            </a>
+            <div class="col-xs-2">
+                <div class="rating pull-left">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <a ng-repeat="review in vm.getReviews(truck)" href="user/:id"><img class="top-trucks-recommendations" title="{{review.title}}" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" /></a>
+            </div>
+            <div class="col-xs-2 top-trucks-location">{{truck.city}}</div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-3">
+    <h1>Soon to be toolbar for something here. Profile maybe? Maybe bucket list? Followed trucks? IDK!</h1>
+</div>

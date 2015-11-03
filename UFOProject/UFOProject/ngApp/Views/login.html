@@ -1,0 +1,21 @@
+﻿<form class="col-xs-6 col-sm-offset-3 signup-form" ng-submit="vm.login()">
+    <div>
+    <label>
+        Email:
+    </label>
+        <input type="text" ng-model="vm.loginUser.userName" name="userName" ng-required="true" ng-maxlength="254" ng-minlength="4" />
+    <span ng-show="signupForm.registerUser.userName.$touched && signupForm.registerUser.userName.$error.required" class="error">
+        Email is required!
+    </span>
+    </div>
+    <div>
+        <label>
+            Password:
+        </label>
+        <input type="password" ng-model="vm.loginUser.password" name="password" ng-required="true" ng-maxlength="15" ng-minlength="8" />
+        <span ng-show="signupForm.password.$touched && signupForm.password.$error.required" class="error">
+            Password is required!
+        </span>
+    </div>
+    <button type="submit">Log In</button>
+</form>

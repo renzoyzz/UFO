@@ -1,0 +1,24 @@
+﻿<div class="col-xs-2">
+    <h1>Events can go here</h1>
+</div>
+<div class="col-xs-8 find-truck-single-container">
+    <h1 class="find-trucks-banner col-xs-12">Meals On Wheels</h1>
+    <div class="row find-truck-container" ng-repeat="truck in vm.truckList">
+        <div class="col-xs-12">
+            <a href="/truckProfile/{{truck.id}}" class="truck-find-link">
+                <div class="col-xs-2 find-truck-image" style="background-image:url(http://images2.houstonpress.com/imager/u/original/6416117/foodtruck2.jpg)"></div>
+                <div class="col-xs-3"><h3 class=" find-trucks-name">{{truck.name}}</h3></div>
+            </a>
+            <div class="col-xs-3">
+                <div class="rating pull-left">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+            <div class="col-xs-2 find-truck-reviews">
+                <a ng-repeat="review in vm.getReviews(truck)" href="user/:id"><img class="top-trucks-recommendations" title="{{review.title}}" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" /></a>
+            </div>
+            <div class="col-xs-1 top-trucks-location">{{truck.city}}</div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-2"><h1>City Picker</h1></div>

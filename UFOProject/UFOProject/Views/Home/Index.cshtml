@@ -1,0 +1,54 @@
+﻿@{ 
+    Layout = null;
+}
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="TruckApp">
+<head>
+    <title></title>
+    <base href="/" />
+    @Styles.Render("~/Content/css")
+    <link href='https://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="AccountController as account">
+
+    <nav>
+        <div id="nav-div-wrapper">
+            <div id="nav-container">
+                <div class="nav-div nav-div-logo">
+                    <a href="/index"><img src="http://puravidawellness.net/image/cache/data/logo_placeholder[1]-360x200.png" id="navLogo" alt="logo" /></a>
+                </div>
+
+                <div class="nav-div-container nav-div">
+                    <div class="nav-bar-search-container">
+                        <input class="nav-search-bar" type="text" />
+                        <button type="submit" class="nav-bar-submit">Search</button>
+                    </div>
+                    <a id="navSignUp" href="/signup">Sign Up</a>
+                    <div class="nav-bar-button-container">
+                        <a class="nav-bar-buttons" href="/index">Home</a>
+                        <a class="nav-bar-buttons" href="/">Events</a>
+                        <a class="nav-bar-buttons" href="/findTrucks">Find a Truck</a>
+                        <a class="nav-bar-buttons" href="/userProfile">Profile</a>
+                    </div>
+                    <a id="navLogIn" href="/login">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div ng-view id="viewDiv"></div>
+    
+
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
+    <script src="~/ngApp/JS/app.js"></script>
+    <script src="~/ngApp/JS/controllers/accountController.js"></script>
+    <script src="~/ngApp/JS/controllers/controllers.js"></script>
+    <script src="~/ngApp/JS/services/accountService.js"></script>
+    <script src="~/ngApp/JS/services/services.js"></script>
+    <script src="~/ngApp/JS/directives/directives.js"></script>
+</body>
+</html>

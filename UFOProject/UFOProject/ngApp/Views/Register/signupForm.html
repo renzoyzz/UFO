@@ -1,0 +1,41 @@
+﻿<div class="signup-form-container">
+    <form class="col-xs-6 col-sm-offset-3 signup-form" name="signupForm" ng-submit="vm.register()" novalidate>
+        <div>
+            <label>
+                Username:
+            </label><input type="text" ng-model="vm.registerUser.userAlias" name="userAlias" ng-required="true" ng-maxlength="12" ng-minlength="3" />
+            <span ng-show="signupForm.userAlias.$touched && signupForm.userAlias.$error.required" class="error">
+                User Name is required!
+            </span>
+        </div>
+        <div>
+            <label>
+                Email:
+            </label><input type="text" ng-model="vm.registerUser.userName" name="userName" ng-required="true" ng-maxlength="254" ng-minlength="4" />
+            <span ng-show="signupForm.registerUser.userName.$touched && signupForm.registerUser.userName.$error.required" class="error">
+                Email is required!
+            </span>
+        </div>
+        <div>
+            <label>
+                Password:
+            </label>
+            <input type="password" ng-model="vm.registerUser.password" name="password" ng-required="true" ng-maxlength="15" ng-minlength="8" />
+
+            <span ng-show="signupForm.password.$touched && signupForm.password.$error.required" class="error">
+                Password is required!
+            </span>
+        </div>
+        <div>
+            <label>
+                Confirm Password:
+            </label>
+            <input type="password" ng-model="vm.registerUser.passwordConfirm" name="passwordConfirm" ng-required="true" ng-maxlength="15" ng-minlength="8" />
+
+            <span ng-show="signupForm.passwordConfirm.$touched && signupForm.passwordConfirm.$error.required" class="error">
+                Pasword Confirm is required!
+            </span>
+        </div>
+        <button type="submit" ng-disabled="signupForm.$invalid">Create User</button>
+    </form>
+</div>
